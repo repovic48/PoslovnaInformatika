@@ -87,6 +87,9 @@ public class FileDocument
 		if (com.mendix.core.Core.isSubClassOf("NarodnaBanka.IzvestajDnevnogStanjaObracunskogRacuna", mendixObject.getType())) {
 			return narodnabanka.proxies.IzvestajDnevnogStanjaObracunskogRacuna.initialize(context, mendixObject);
 		}
+		if (com.mendix.core.Core.isSubClassOf("NarodnaBanka.IzvestajIzvodaObracunskogRacuna", mendixObject.getType())) {
+			return narodnabanka.proxies.IzvestajIzvodaObracunskogRacuna.initialize(context, mendixObject);
+		}
 		if (com.mendix.core.Core.isSubClassOf("System.SynchronizationErrorFile", mendixObject.getType())) {
 			return system.proxies.SynchronizationErrorFile.initialize(context, mendixObject);
 		}

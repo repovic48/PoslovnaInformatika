@@ -27,8 +27,6 @@ public class Banka
 		kontaktTelefon("kontaktTelefon"),
 		obracunskiRacun("obracunskiRacun"),
 		BankaIzMesta("PoslovnaBanka.BankaIzMesta"),
-		BankaDuznika("PoslovnaBanka.BankaDuznika"),
-		BankaPoverioca("PoslovnaBanka.BankaPoverioca"),
 		ObracunskiRacun_Banka("NarodnaBanka.ObracunskiRacun_Banka");
 
 		private final java.lang.String metaName;
@@ -392,100 +390,6 @@ public class Banka
 			getMendixObject().setValue(context, MemberNames.BankaIzMesta.toString(), null);
 		} else {
 			getMendixObject().setValue(context, MemberNames.BankaIzMesta.toString(), bankaizmesta.getMendixObject().getId());
-		}
-	}
-
-	/**
-	 * @throws com.mendix.core.CoreException
-	 * @return value of BankaDuznika
-	 */
-	public final poslovnabanka.proxies.PorukaPrenosa getBankaDuznika() throws com.mendix.core.CoreException
-	{
-		return getBankaDuznika(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of BankaDuznika
-	 * @throws com.mendix.core.CoreException
-	 */
-	public final poslovnabanka.proxies.PorukaPrenosa getBankaDuznika(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
-	{
-		poslovnabanka.proxies.PorukaPrenosa result = null;
-		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.BankaDuznika.toString());
-		if (identifier != null) {
-			result = poslovnabanka.proxies.PorukaPrenosa.load(context, identifier);
-		}
-		return result;
-	}
-
-	/**
-	 * Set value of BankaDuznika
-	 * @param bankaduznika
-	 */
-	public final void setBankaDuznika(poslovnabanka.proxies.PorukaPrenosa bankaduznika)
-	{
-		setBankaDuznika(getContext(), bankaduznika);
-	}
-
-	/**
-	 * Set value of BankaDuznika
-	 * @param context
-	 * @param bankaduznika
-	 */
-	public final void setBankaDuznika(com.mendix.systemwideinterfaces.core.IContext context, poslovnabanka.proxies.PorukaPrenosa bankaduznika)
-	{
-		if (bankaduznika == null) {
-			getMendixObject().setValue(context, MemberNames.BankaDuznika.toString(), null);
-		} else {
-			getMendixObject().setValue(context, MemberNames.BankaDuznika.toString(), bankaduznika.getMendixObject().getId());
-		}
-	}
-
-	/**
-	 * @throws com.mendix.core.CoreException
-	 * @return value of BankaPoverioca
-	 */
-	public final poslovnabanka.proxies.PorukaPrenosa getBankaPoverioca() throws com.mendix.core.CoreException
-	{
-		return getBankaPoverioca(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of BankaPoverioca
-	 * @throws com.mendix.core.CoreException
-	 */
-	public final poslovnabanka.proxies.PorukaPrenosa getBankaPoverioca(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
-	{
-		poslovnabanka.proxies.PorukaPrenosa result = null;
-		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.BankaPoverioca.toString());
-		if (identifier != null) {
-			result = poslovnabanka.proxies.PorukaPrenosa.load(context, identifier);
-		}
-		return result;
-	}
-
-	/**
-	 * Set value of BankaPoverioca
-	 * @param bankapoverioca
-	 */
-	public final void setBankaPoverioca(poslovnabanka.proxies.PorukaPrenosa bankapoverioca)
-	{
-		setBankaPoverioca(getContext(), bankapoverioca);
-	}
-
-	/**
-	 * Set value of BankaPoverioca
-	 * @param context
-	 * @param bankapoverioca
-	 */
-	public final void setBankaPoverioca(com.mendix.systemwideinterfaces.core.IContext context, poslovnabanka.proxies.PorukaPrenosa bankapoverioca)
-	{
-		if (bankapoverioca == null) {
-			getMendixObject().setValue(context, MemberNames.BankaPoverioca.toString(), null);
-		} else {
-			getMendixObject().setValue(context, MemberNames.BankaPoverioca.toString(), bankapoverioca.getMendixObject().getId());
 		}
 	}
 
